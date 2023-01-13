@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+{% load crispy_forms_tags %}
+
+    {% block content %} 
+        <h1>Loginr Page</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button>log in</button>
+        </form>
+
+        <small class="text-nuted" >
+            хотите регистрироваться ?<a href=" {% url 'register'  %} ">Log in </a>
+
+        </small>
+
+        
+    {% endblock %}
