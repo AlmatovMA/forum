@@ -12,7 +12,7 @@ urlpatterns = [
     path("create_post", views.CreatePost.as_view(), name='create_post'),
     path("update_post/<int:pk>/", views.updatePost.as_view(), name='update_post'),
     path("delete_post/<int:pk>/", views.DeletePost.as_view(), name='delete_post'),
-    path("post_detail/<int:pk>/", views.post_detail.as_view(), name='post_detail'),
+    path("post_detail/<int:pk>/", views.post_detail.as_view(template_name="post_detail.html"), name='post_detail'),
     path("add_comment/<int:pk>/", views.AddComment.as_view() , name='add_comment'),
     path("abaut", views.abaut , name='abaut'),
     path("search/", views.Search.as_view() , name='search'),
