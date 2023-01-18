@@ -11,9 +11,10 @@ urlpatterns = [
     path("", views.PostView.as_view(), name='index'),
     path("create_post", views.CreatePost.as_view(), name='create_post'),
     path("update_post/<int:pk>/", views.updatePost.as_view(), name='update_post'),
-    path("delate_post/<int:pk>/", views.DeletePost.as_view(), name='delete_post'),
-    path("post/<int:pk>/", views.detale_post.as_view(), name='post_detail'),
-    path("post/<int:pk>/", views.AddComment.as_view() , name='add_comment'),
+    path("delete_post/<int:pk>/", views.DeletePost.as_view(), name='delete_post'),
+    path("post_detail/<int:pk>/", views.post_detail.as_view(), name='post_detail'),
+    path("add_comment/<int:pk>/", views.AddComment.as_view() , name='add_comment'),
     path("abaut", views.abaut , name='abaut'),
+    path("search/", views.Search.as_view() , name='search'),
     
 ]
